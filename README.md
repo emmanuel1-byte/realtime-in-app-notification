@@ -93,14 +93,6 @@ This project demonstrates:
 - Implementing user preferences for notifications
 - Handling online/offline notification scenarios
 
-## Future Enhancements
-
-- Implement notifications for recipe updates and deletions
-- Add notification filtering and search
-- Email fallback for undelivered notifications
-- Push notifications for mobile devices
-- Notification grouping and batching
-
 ## Contributing
 
 This is a learning project, but feel free to fork and experiment with your own notification features!
