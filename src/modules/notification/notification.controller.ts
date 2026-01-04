@@ -9,7 +9,12 @@ import { NotificationFilterDto } from './dto/request/filter.request.dto';
 @Controller('notifications')
 export class NotificationController {
   constructor(private readonly notificationService: NotificationService) {}
-
+  @Get('/unread-count')
+  async getUnreadNotifcationsCount(@Req() req: any) {
+    return await this.notificationService.getUnreadNotifcationsCount(
+      req.user.sub,
+    );
+  }
   @Get()
   async listNotification(@Req() req: any, @Query() dto: NotificationFilterDto) {
     return await this.notificationService.listNotification(req.user.sub, dto);
